@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Médicos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav>
+        <img src="static/logo.png" alt="Logotipo">
+        <ul>
+            <li><a href="{{ url_for('lista_pacientes') }}">Pacientes</a></li>
+            <li><a href="{{ url_for('lista_medicos') }}">Médicos</a></li>
+            <li><a href="{{ url_for('lista_consultas') }}">Consultas</a></li>
+        </ul>
+    </nav>
+    <h1>Médicos</h1>
+    <a href="{{ url_for('novo_medico') }}" class="novo">Novo Médico</a>
+    <ul class="lista">
+        {% for medico in medicos %}
+        <li class="item">
+            <a href="{{ url_for('detalhes_medico', id=medico.id) }}">{{ medico.nome }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

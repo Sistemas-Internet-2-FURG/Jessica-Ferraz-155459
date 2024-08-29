@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    padding: 20px;
+    margin: 0;
+    margin-top: 80px;
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    z-index: 1000;
+}
+
+nav img {
+    height: 60px;
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: 14px 20px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+    text-decoration: none;
+}
+
+.novo {
+    display: block;
+    width: fit-content;
+    margin: 20px 0; /* Margem em cima e embaixo para separar o botão e a lista */
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    /* Alinha o botão à esquerda */
+    margin-left: 20px; /* Ajuste o valor conforme necessário */
+}
+
+.novo:hover {
+    background-color: #575757;
+    text-decoration: none;
+}
+
+.lista {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0; /* Margem em cima e embaixo para separar a lista do botão */
+    width: 80%;
+    max-width: 800px;
+    /* Alinha a lista à esquerda e mantém o espaçamento apropriado */
+    margin-left: 20px; /* Ajuste o valor conforme necessário */
+}
+
+.lista li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 5px 0;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.lista li:hover {
+    background-color: #cfcfcf;
+}
+
+.lista li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button:hover {
+    background-color: #45a049;
+}

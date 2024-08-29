@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Nova Consulta</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+</head>
+<body>
+    <nav>
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logotipo">
+        <ul>
+            <li><a href="{{ url_for('lista_pacientes') }}">Pacientes</a></li>
+            <li><a href="{{ url_for('lista_medicos') }}">Médicos</a></li>
+            <li><a href="{{ url_for('lista_consultas') }}">Consultas</a></li>
+        </ul>
+    </nav>
+    <h1>Nova Consulta</h1>
+    <form action="{{ url_for('nova_consulta') }}" method="POST">
+        <label for="paciente_id">Paciente:</label>
+        <select id="paciente_id" name="paciente_id" class="select2" required>
+            <option value="" disabled selected>Escolha um paciente...</option>
+            {% for paciente in pacientes %}
+            <option value="{{ paciente.id }}">{{ paciente.nome }}</option>
+            {% endfor %}
+        </select><br>
+    
+        <label for="medico_id">Médico:</label>
+        <select id="medico_id" name="medico_id" class="select2" required>
+            <option value="" disabled selected>Escolha um médico...</option>
+            {% for medico in medicos %}
+            <option value="{{ medico.id }}">{{ medico.nome }}</option>
+            {% endfor %}
+        </select><br>
+    
+        <label for="data">Data:</label>
+        <input type="datetime-local" id="data" name="data" required><br>
+    
+        <label for="motivo">Motivo:</label>
+        <input type="text" id="motivo" name="motivo" required><br>
+    
+        <button type="submit">Salvar</button>
+    </form>
+    <a href="{{ url_for('lista_consultas') }}">Voltar para a Lista</a>
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <!-- Script para ativar o Select2 -->
+    <script>
+        $(document).ready(function() {
+            $('.select2').select2({
+                placeholder: "Selecione uma opção",
+                allowClear: true
+            });
+        });
+    </script>
+</body>
+</html>

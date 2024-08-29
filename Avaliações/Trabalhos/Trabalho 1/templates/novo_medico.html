@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Novo Médico</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <nav>
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logotipo">
+        <ul>
+            <li><a href="{{ url_for('lista_pacientes') }}">Pacientes</a></li>
+            <li><a href="{{ url_for('lista_medicos') }}">Médicos</a></li>
+            <li><a href="{{ url_for('lista_consultas') }}">Consultas</a></li>
+        </ul>
+    </nav>
+    <h1>Novo Médico</h1>
+    <form action="{{ url_for('novo_medico') }}" method="POST">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required><br>
+
+        <label for="especialidade">Especialidade:</label>
+        <input type="text" id="especialidade" name="especialidade" required><br>
+
+        <label for="crm">CRM:</label>
+        <input type="text" id="crm" name="crm" required><br>
+
+        <button type="submit">Salvar</button>
+    </form>
+    <a href="{{ url_for('lista_medicos') }}">Voltar para a Lista</a>
+</body>
+</html>

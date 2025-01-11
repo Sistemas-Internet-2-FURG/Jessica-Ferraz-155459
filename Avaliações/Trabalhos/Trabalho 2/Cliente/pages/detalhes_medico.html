@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhes do Médico</title>
+    <link rel="stylesheet" href="../static/style_detalhes.css">
+    <script src="../scripts/logout.js" defer></script>
+</head>
+<body>
+    <nav>
+        <img src="../static/logo.png" alt="Logotipo">
+        <ul>
+            <li><a href="../pages/lista_pacientes.html">Pacientes</a></li>
+            <li><a href="../pages/lista_medicos.html">Médicos</a></li>
+            <li><a href="../pages/lista_consultas.html">Consultas</a></li>
+        </ul>
+        <ul class="logout-link">
+            <li><a href="#" id="logoutBtn">Sair</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Detalhes do Médico</h1>
+        <div class="details" id="medico-details">
+            <!-- Detalhes do medico serão carregados via JavaScript -->
+        </div>
+        <div class="actions">
+            <a id="editar-medico">Editar</a>
+            <button id="deletar-medico">Deletar</button>
+        </div>
+    </div>
+    <div class="actions-back">
+        <a href="../pages/lista_medicos.html">Voltar para a lista</a>
+    </div>
+
+    <script src="../scripts/detalhesMedico.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // Função para verificar se o usuário está autenticado
+        function checkAuth() {
+            const token = localStorage.getItem('access_token'); // Recupera o token do localStorage
+
+            if (!token) {
+                // Se não tiver token, direciona para a página de login
+                window.location.href = './pages/login.html';
+                return;
+            }
+
+            // Envia a requisição GET para verificar se o token é válido
+            fetch('http://localhost:5000/', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`,  // Envia o token no cabeçalho da requisição
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Se o token for válido, direciona para a página inicial
+                    window.location.href = './pages/home.html';
+                } else {
+                    // Caso o token seja inválido ou expirado, direciona para o login
+                    alert('Token inválido ou expirado, redirecionando para o login...');
+                    window.location.href = './pages/login.html';
+                }
+            })
+            .catch(error => {
+                console.error('Erro ao verificar o token:', error);
+                // Caso ocorra um erro na requisição, redireciona para o login
+                window.location.href = './pages/login.html';
+            });
+        }
+
+        window.onload = checkAuth;
+
+    </script>
+</head>
+</html>

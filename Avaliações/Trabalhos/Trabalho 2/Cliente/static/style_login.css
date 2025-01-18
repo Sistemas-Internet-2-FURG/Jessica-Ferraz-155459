@@ -1,80 +1,100 @@
-/* Reset básico para margens e paddings */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Corpo e fontes */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #eaf9dd;
     color: #333;
     line-height: 1.6;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    flex-direction: column;
-    padding-top: 10px; /* Ajuste para que o conteúdo não fique escondido atrás do nav fixo */
+    min-height: 100vh;
+    padding-top: 0px; 
 }
 
-/* Navegação fixa no topo */
 nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px;
+    padding: 8px 20px;
     background-color: #ffffff;
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Garante que a imagem fique à esquerda */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    z-index: 10; /* Garante que o nav fique acima do conteúdo */
+    justify-content: flex-start;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10; 
 }
 
 nav img {
-    width: 120px;
+    margin-right: 20px;
+    width: 160px;
     height: auto;
 }
 
-/* Título principal */
-h1 {
-    font-size: 32px;
-    margin: 30px 0;
-    font-weight: 600;
-    color: #444;
+nav a {
+    width: 160px;
+    height: 79.24px;
 }
 
-/* Formulário */
-form {
-    width: 90%;
+.container {
+    width: 100%;
     max-width: 400px;
     background-color: #fff;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #444;
     text-align: center;
 }
 
-form label {
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
     display: block;
-    margin: 10px 0 5px;
+    margin-bottom: 5px;
     font-size: 16px;
     font-weight: 600;
 }
 
-form input {
+input[type="text"],
+input[type="email"],
+input[type="password"] {
     width: 100%;
     padding: 12px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
     font-size: 16px;
 }
 
-form button {
+button[type="submit"] {
     width: 100%;
     padding: 12px;
     background-color: #0066cc;
@@ -87,20 +107,20 @@ form button {
     transition: background-color 0.3s;
 }
 
-form button:hover {
+button[type="submit"]:hover {
     background-color: #004a99;
 }
 
-/* Link "Voltar para a página inicial" */
-a {
-    display: block;
-    margin-top: 20px;
+p {
     text-align: center;
-    font-size: 16px;
+    margin-top: 15px;
+}
+
+p a {
     color: #0066cc;
     text-decoration: none;
 }
 
-a:hover {
+p a:hover {
     text-decoration: underline;
 }

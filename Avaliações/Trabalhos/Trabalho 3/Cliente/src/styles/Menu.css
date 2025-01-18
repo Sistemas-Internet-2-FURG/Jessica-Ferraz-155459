@@ -1,0 +1,39 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    width: 140px;
+    height: 69.34px;
+    padding: 0px;
+    margin-right: 20px;
+}
+
+nav img {
+    width: 140px;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #004aad;
+    font-size: 19px;
+    font-weight: 600;
+    padding: 8px 12px;
+}
+
+a:hover {
+    text-decoration: underline;
+}

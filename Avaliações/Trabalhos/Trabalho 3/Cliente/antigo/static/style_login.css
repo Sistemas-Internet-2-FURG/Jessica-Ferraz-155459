@@ -1,44 +1,46 @@
-/* Reset básico para margens e paddings */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Corpo da página */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #eaf9dd;
     color: #333;
     line-height: 1.6;
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    min-height: 100vh; /* Garante que a página ocupe toda a altura */
-    padding-top: 80px; /* Espaço para o cabeçalho fixo */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 0px; 
 }
 
-/* Navegação fixa no topo */
 nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px;
+    padding: 8px 20px;
     background-color: #ffffff;
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Garante que a imagem fique à esquerda */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    z-index: 10; /* Garante que o nav fique acima do conteúdo */
+    justify-content: flex-start;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10; 
 }
 
 nav img {
-    width: 120px;
+    margin-right: 20px;
+    width: 160px;
     height: auto;
 }
 
-/* Contêiner principal */
+nav a {
+    width: 160px;
+    height: 79.24px;
+}
+
 .container {
     width: 100%;
     max-width: 400px;
@@ -49,7 +51,6 @@ nav img {
     text-align: left;
 }
 
-/* Título do formulário */
 h2 {
     font-size: 32px;
     margin-bottom: 20px;
@@ -58,7 +59,6 @@ h2 {
     text-align: center;
 }
 
-/* Mensagens de Flash */
 .alert {
     padding: 15px;
     margin-bottom: 20px;
@@ -68,17 +68,14 @@ h2 {
     border: 1px solid #c3e6cb;
 }
 
-/* Formulário */
 form {
     width: 100%;
 }
 
-/* Grupo de campos de entrada */
 .form-group {
     margin-bottom: 20px;
 }
 
-/* Labels dos campos */
 label {
     display: block;
     margin-bottom: 5px;
@@ -86,7 +83,6 @@ label {
     font-weight: 600;
 }
 
-/* Campos de entrada */
 input[type="text"],
 input[type="email"],
 input[type="password"] {
@@ -98,7 +94,6 @@ input[type="password"] {
     font-size: 16px;
 }
 
-/* Botão de submit */
 button[type="submit"] {
     width: 100%;
     padding: 12px;
@@ -116,7 +111,6 @@ button[type="submit"]:hover {
     background-color: #004a99;
 }
 
-/* Link para login */
 p {
     text-align: center;
     margin-top: 15px;

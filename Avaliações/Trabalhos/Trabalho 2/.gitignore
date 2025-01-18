@@ -1,0 +1,12 @@
+# Bytecode files
+__pycache__/
+*.pyc
+*.pyo
+
+# IDEs e editores de código
+.vscode/
+.idea/
+
+# Arquivos de configuração do Python
+*.bak
+*.swp

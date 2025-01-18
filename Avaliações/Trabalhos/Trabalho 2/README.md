@@ -6,23 +6,9 @@ Este é um sistema de cadastro de pacientes, médicos e consultas médicas desen
 
 O sistema é baseado em um banco de dados PostgreSQL, e possui as funcionalidades básicas de CRUD (Criar, Ler, Atualizar e Excluir) para pacientes, médicos e consultas médicas. Ele também utiliza autenticação JWT para proteger as rotas de acesso, garantindo que apenas usuários autenticados possam interagir com o sistema.
 
-### Funcionalidades:
+## Vídeo da Apresentação
 
-- Cadastro de pacientes
-- Cadastro de médicos
-- Cadastro de consultas
-- Autenticação via JWT
-- Sistema de gerenciamento de consultas médicas
-
-## Tecnologias Utilizadas
-
-- **Flask**: Framework web para Python
-- **Flask-SQLAlchemy**: ORM para integração com bancos de dados SQL
-- **Flask-Migrate**: Extensão para gerenciamento de migrações de banco de dados
-- **Flask-JWT-Extended**: Implementação de JWT para autenticação
-- **PostgreSQL**: Banco de dados
-- **Python-dotenv**: Para carregar variáveis de ambiente
-- **Flask-CORS**: Suporte para requisições entre diferentes origens (CORS)
+Assista ao vídeo da apresentação do projeto no seguinte link: [Link para o vídeo](https://www.youtube.com/watch?v=gJybwzx6GNg)
 
 ## Instalação
 
@@ -61,7 +47,3 @@ O sistema é baseado em um banco de dados PostgreSQL, e possui as funcionalidade
    ```
 
    O servidor estará disponível em `http://127.0.0.1:5000/`.
-
-## Vídeo da Apresentação
-
-Assista ao vídeo da apresentação do projeto no seguinte link: [Link para o vídeo](https://www.youtube.com/watch?v=gJybwzx6GNg)

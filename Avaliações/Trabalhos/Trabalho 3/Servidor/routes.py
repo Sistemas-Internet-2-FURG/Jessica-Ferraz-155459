@@ -77,6 +77,7 @@ def listar_consultas():
     for consulta in consultas:
         lista_consultas.append({
             'id': consulta.id,
+            'data': consulta.data.strftime('%d/%m/%Y %H:%M'),
             'paciente': consulta.paciente.nome,
             'medico': consulta.medico.nome
         })
@@ -163,12 +164,14 @@ def detalhes_consulta(id):
     consulta_data = {
         'id': consulta.id,
         'paciente': {
+            'id': consulta.paciente.id,
             'nome': consulta.paciente.nome,
             'data_nascimento': consulta.paciente.data_nascimento.strftime('%Y-%m-%d'),
             'endereco': consulta.paciente.endereco,
             'telefone': consulta.paciente.telefone
         },
         'medico': {
+            'id': consulta.medico.id,
             'nome': consulta.medico.nome,
             'especialidade': consulta.medico.especialidade,
             'crm': consulta.medico.crm

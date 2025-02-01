@@ -1,17 +1,28 @@
-import "../styles/Menu.css";
 import PropTypes from 'prop-types';
-import logo from '../assets/logo.png'; 
+import logo from '../assets/logo.png';
+import "../styles/Menu.css"
 
 function Menu({ showLinks = true }) {
+  const handleLogout = (event) => {
+    event.preventDefault();
+    localStorage.removeItem('access_token');
+    window.location.href = '/login';
+  };
+    
   return (
-    <nav>
-      <a href="/home"><img src={logo} alt="Logo" className="logo" /></a>
+    <nav className="menu">
+      <a href="/home" className="menu-logo"><img src={logo} alt="Logo" className="logo" /></a>
       {showLinks ? (
-        <ul>
-          <li><a href="/pacientes">Pacientes</a></li>
-          <li><a href="/medicos">Médicos</a></li>
-          <li><a href="/consultas">Consultas</a></li>
-        </ul>
+        <>
+          <ul className="menu-links">
+            <li className="menu-item"><a href="/pacientes" className="menu-link">Pacientes</a></li>
+            <li className="menu-item"><a href="/medicos" className="menu-link">Médicos</a></li>
+            <li className="menu-item"><a href="/consultas" className="menu-link">Consultas</a></li>
+          </ul>
+          <ul className="logout-link">
+            <li className="logout-item"><a href="#" className="logout" onClick={handleLogout}>Sair</a></li>
+          </ul>
+        </>
       ) : null}
     </nav>
   );
@@ -22,3 +33,4 @@ Menu.propTypes = {
 };
 
 export default Menu;
+

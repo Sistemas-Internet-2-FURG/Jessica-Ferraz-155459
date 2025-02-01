@@ -64,7 +64,7 @@ function Consultas() {
             <NovoLink referencia="/consultas/nova" texto="Nova Consulta" />
             <ul>
                 {consultas.map(consulta => (
-                    <ItemLista key={consulta.id} referencia={`/detalhes_consulta?id=${consulta.id}`} nome={`${consulta.medico} | ${consulta.paciente}`} />
+                    <ItemLista key={consulta.id} referencia={`/consultas/detalhes?id=${consulta.id}`} nome={`${consulta.data} | ${consulta.medico} | ${consulta.paciente}`} />
                 ))}
             </ul>
         </>

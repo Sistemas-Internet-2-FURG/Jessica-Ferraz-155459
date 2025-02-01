@@ -1,9 +1,10 @@
 import PropTypes from "prop-types";
+import "../styles/ItemLista.css"
 
 function ItemLista({ nome, referencia }) {
     return (
-        <li>
-            <a href={referencia}>{nome}</a>
+        <li className="lista">
+            <a className="item" href={referencia}>{nome}</a>
         </li>
     );
 }

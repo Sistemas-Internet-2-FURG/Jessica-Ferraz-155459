@@ -1,4 +1,4 @@
-nav {
+.menu {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -7,26 +7,26 @@ nav {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-nav a {
+.menu a {
     width: 140px;
     height: 69.34px;
     padding: 0px;
     margin-right: 20px;
 }
 
-nav img {
+.menu img {
     width: 140px;
     height: auto;
 }
 
-ul {
+.menu-links {
     list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
 }
 
-a {
+.menu-link {
     text-decoration: none;
     color: #004aad;
     font-size: 19px;
@@ -34,6 +34,26 @@ a {
     padding: 8px 12px;
 }
 
-a:hover {
+.menu-link:hover {
+    color: #003b8a;
+}
+
+.logout-link {
+    list-style: none;
+    margin-left: auto;
+}
+
+.logout-item {
+    margin-left: 20px;
+    font-weight: 600;
+}
+
+.logout {
+    color: #e60000;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.logout:hover {
     text-decoration: underline;
 }

@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eaf9dd;
+    color: #333;
+    line-height: 1.6;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 8px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    margin-right: 20px;
+    width: 160px;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #004aad;
+    font-weight: 600;
+    font-size: 21px;
+    width: 160px;
+    height: 79.24px;
+    margin-right: 20px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav .logout-link {
+    margin-left: auto;
+}
+
+nav .logout-link a {
+    color: #e60000;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #444;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.details p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.details label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Ações */
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.actions a {
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.actions a:hover {
+    color: #004a99;
+}
+
+.actions form {
+    display: inline;
+}
+
+.actions button {
+    background-color: #e60000;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.actions button:hover {
+    background-color: #cc0000;
+}
+
+.actions-back {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.actions-back a {
+    font-size: 16px;
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.actions-back a:hover {
+    color: #004a99;
+}

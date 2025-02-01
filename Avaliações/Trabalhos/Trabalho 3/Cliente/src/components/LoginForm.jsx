@@ -1,15 +1,8 @@
-import { useState } from "react";
+import Form from "./Form";
 
 function LoginForm() {
 
-    async function logarUsuario(event) {
-
-        event.preventDefault();
-
-        const formData = {
-            username: username,
-            password: password
-        };
+    async function logarUsuario(formData) {
 
         try {
             const response = await fetch('http://localhost:5000/login', {
@@ -28,31 +21,21 @@ function LoginForm() {
                 window.location.href = '/home';
             } else if (response.status === 401) {
                 alert('Usuário ou senha incorretos. Por favor, tente novamente.');
-                setUsername('');
-                setPassword('');
             }
         } catch {
-            alert('Erro ao realizar o login. Por favor, tente novamente.');
+            alert('Erro de conexão. Por favor, tente novamente.');
             window.location.reload();
         }
     };
     
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+    const fields = [
+        { name: "username", label: "Nome de Usuário", type: "text", required: true },
+        { name: "password", label: "Senha", type: "password", required: true }
+    ];
 
-    return (
-        <form onSubmit={logarUsuario}>
-            <div>
-                <label htmlFor="username">Nome de Usuário</label>
-                <input type="text" id="username" name="username" value={username} onChange={(e) => setUsername(e.target.value)} required />
-            </div>
-            <div>
-                <label htmlFor="password">Senha</label>
-                <input type="password" id="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} required/>
-            </div>
-            <button type="submit">Entrar</button>
-        </form>
-    )
+    const initialValues = {}
+
+    return <Form onSubmit={logarUsuario} fields={fields} buttonText="Entrar" initialValues={initialValues}/>;
 }
 
 export default LoginForm;

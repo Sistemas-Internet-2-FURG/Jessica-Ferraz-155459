@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Pacientes</title>
+    <link rel="stylesheet" href="../static/style_lista.css">
+    <script src="../scripts/fetchPacientes.js" defer></script>
+    <script src="../scripts/logout.js" defer></script>
+</head>
+<body>
+    <nav>
+        <a href="../pages/home.html">
+            <img src="../static/logo.png" class="logo">
+        </a>
+        <ul>
+            <li><a href="../pages/lista_pacientes.html">Pacientes</a></li>
+            <li><a href="../pages/lista_medicos.html">Médicos</a></li>
+            <li><a href="../pages/lista_consultas.html">Consultas</a></li>
+        </ul>
+        <ul class="logout-link">
+            <li><a href="#" id="logoutBtn">Sair</a></li>
+        </ul>
+    </nav>
+
+    <h1>Pacientes</h1>
+    <a href="../pages/novo_paciente.html" class="novo">Novo Paciente</a>
+    <ul class="lista">
+        <!-- A lista de pacientes será carregada dinamicamente -->
+    </ul>
+</body>
+</html>
+

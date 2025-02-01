@@ -3,6 +3,7 @@ import Titulo from "../components/Titulo";
 import LoginForm from "../components/LoginForm";
 import { checkAuth } from "../utils/auth";
 import { useEffect, useState } from 'react';
+import "../styles/FormFooter.css"
 
 function Login() {
     const [isAuthenticated, setIsAuthenticated] = useState(true);
@@ -26,7 +27,9 @@ function Login() {
                 <div className="container">
                     <Titulo texto="Login" />
                     <LoginForm />
-                    <p>Não possui conta? <a href="/registro">Faça o seu cadastro aqui</a></p>
+                    <div className="form-footer">
+                        <p>Ainda não tem uma conta? <a href="/registro">Faça o seu cadastro aqui</a></p>
+                    </div>
                 </div>
             )
         } 

@@ -64,7 +64,7 @@ function Pacientes() {
             <NovoLink referencia="/pacientes/novo" texto="Novo Paciente" />
             <ul>
                 {pacientes.map(paciente => (
-                    <ItemLista key={paciente.id} referencia={`/detalhes_paciente?id=${paciente.id}`} nome={paciente.nome} />
+                    <ItemLista key={paciente.id} referencia={`pacientes/detalhes?id=${paciente.id}`} nome={paciente.nome} />
                 ))}
             </ul>
         </>
